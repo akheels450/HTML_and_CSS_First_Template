@@ -443,6 +443,12 @@ header .links ul li:not(:last-child) a {
     gap: 20px;
 }
 
+@media (max-width:420px) {
+    .portofolio .container .container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
 .portofolio .container .container>div {
     background-color: white;
     transition-duration: 0.5s;
