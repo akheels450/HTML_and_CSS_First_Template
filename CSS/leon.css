@@ -347,84 +347,72 @@ header .links ul li:not(:last-child) a {
     padding: var(--sectionpadding) 0;
 }
 
-.services .container {
+.services .serv-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 100px;
+    gap: 30px;
+}
+
+.services .col>div:not(.image) {
     display: flex;
-    flex-flow: row wrap;
-}
-
-.services .top {
-    margin-bottom: 50px;
-    text-align: center;
-    width: 100%;
-}
-
-.services .left {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 68%;
-    gap: 10px;
-}
-
-.services .left i {
-    flex-basis: 60px;
-}
-
-.services .left>div {
-    width: calc(50% - 20px);
-    display: flex;
+    margin-bottom: 40px;
     transition-duration: 0.5s;
 }
 
-.services .left>div:hover {
-    transform: translateY(-10px) scale(1.05);
+.services .col>div:not(.image):hover {
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 0 10px gray;
     padding: 10px 0;
 }
 
-.services .left>div>div {
-    flex: 1;
-}
-
-.services .left>div>div>h3 {
+.services .col>div h3 {
     margin-top: 0;
 }
 
-.services .left p {
-    color: grey;
+.services i {
+    flex-basis: 60px;
 }
 
-.services .right {
-    width: 30%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.services .col>div>div {
+    flex: 1;
+}
+
+.services .col p {
+    color: gray;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.services .image {
     position: relative;
+    text-align: center;
 }
 
-.services .right img {
+.services .image img {
     height: 350px;
     width: 270px;
     transition-duration: 0.5s;
 }
 
-.services .right img:hover {
-    transform: translateY(-10px) translateX(-20%) scaleX(1.02) scaleY(1.02);
+.services .image img:hover {
+    transform: translateY(-10px) translateX(-40px) scaleX(1.02) scaleY(1.02);
     box-shadow: 0 0 10px gray;
 }
 
-.services .right::before {
+.services .image::before {
     content: "";
-    height: calc(100% + 40px);
+    height: calc(100% + 100px);
     width: 100px;
     background-color: #2c4755;
     position: absolute;
-    right: -50px;
+    right: -20px;
+    top: -50px;
     z-index: -1;
 }
 
 @media (max-width:776px) {
-    .services .left>div {
+    .services .col>div {
         flex-direction: column;
         text-align: center;
         align-items: center;
@@ -432,18 +420,8 @@ header .links ul li:not(:last-child) a {
 }
 
 @media (max-width: 1199px) {
-    .services .right {
+    .services .serv-cont .image-col {
         display: none;
-    }
-
-    .services .left {
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
-    }
-
-    .services .left>div {
-        width: 100%;
     }
 }
 
