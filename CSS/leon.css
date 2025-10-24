@@ -438,7 +438,7 @@ header .links ul li:not(:last-child) a {
 
 .portofolio .container .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: 50px;
     gap: 20px;
 }
@@ -490,6 +490,15 @@ header .links ul li:not(:last-child) a {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 0 10px gray;
     cursor: pointer;
+}
+
+@media (max-width:776px) {
+    .portofolio button {
+        width: 140px;
+        height: 40px;
+        border-radius: 40px;
+        font-size: 1rem;
+    }
 }
 
 /* End Portofoli */
