@@ -166,6 +166,12 @@ div:hover .special-heading+p {
 
 header {
     padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 1px 6px 17px 0px gray;
 }
 
 header .container {
@@ -217,7 +223,7 @@ header .links:hover ul {
     right: 0;
     background-color: #eee;
     width: 200px;
-    height: 200px;
+    height: 246.95px;
     list-style-position: inside;
     list-style-type: none;
     padding: 0;
@@ -445,7 +451,7 @@ header .links ul li:not(:last-child) a {
 
 @media (max-width:420px) {
     .portofolio .container .container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
 
